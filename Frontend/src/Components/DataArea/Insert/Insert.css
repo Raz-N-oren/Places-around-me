@@ -1,3 +1,15 @@
-.Insert {
-	
+.Insert > form {
+	width: 250px;
+    border: 1px solid black;
+    padding: 12px;
+    border-radius: 10px;
+    margin: auto;
+    text-align: left;
+}
+
+.Insert input, .Insert button{
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: x-large;
 }

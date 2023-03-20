@@ -1,5 +1,5 @@
 class Config {
-    public serverUrl = "http://localhost:3001/api/____";
+    public storesUrl = "http://localhost:3001/api/stores/";
 }
 
 const appConfig = new Config(); // Singleton

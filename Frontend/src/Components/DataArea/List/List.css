@@ -1,3 +1,22 @@
-.List {
-	
+.List > table {
+	margin: auto;
 }
+
+.List > table, .List th, .List td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:12px;
+}
+
+.List tr:nth-child(even){
+    background-color: pink;
+}
+
+.List tr:nth-child(odd){
+    background-color: lightsalmon;
+}
+
+.List thead tr:first-child{
+    background-color: lightgray;
+}
+

@@ -1,0 +1,4 @@
+3/21/2023, 12:11:21 AM 	 ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+----------------------------
+3/21/2023, 12:11:21 AM 	 ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+----------------------------
