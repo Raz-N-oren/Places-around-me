@@ -32,8 +32,6 @@ async function deleteStore(storeId: number): Promise<void> {
     if(info.affectedRows === 0) throw new ResourceNotFoundErrorModel(storeId);
 }
 
-
-
 export default {
     getAllStores,
     addStore,

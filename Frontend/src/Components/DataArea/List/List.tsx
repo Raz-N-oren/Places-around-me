@@ -12,8 +12,24 @@ function List(): JSX.Element {
         storesService.getAllStores()
             .then(stores => setStores(stores))
             .catch(err => alert(err.message));
+    }, []);
 
-    });
+    async function deleteStore(storeId: number) {
+        try {
+            const ok = window.confirm("Are you sure?");
+            if (!ok) return;
+            
+            await storesService.deleteStore(storeId);
+            const index = stores.findIndex(s => s.storeId === storeId);
+            stores.splice(index, 1);
+            const duplicatedStores = [...stores];
+            setStores(duplicatedStores);
+
+        }
+        catch (err: any) {
+            alert(err.message);
+        }
+    }
 
     return (
         <div className="List">
@@ -27,6 +43,7 @@ function List(): JSX.Element {
                         <th>Description</th>
                         <th>Address</th>
                         <th>Geolocation</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,8 +53,11 @@ function List(): JSX.Element {
                             <td>{s.description}</td>
                             <td>{s.address}</td>
                             <td>{s.latitude},{s.longitude}</td>
-                        </tr>)
-                        }
+                            <td>
+                                <button onClick={() => deleteStore(s.storeId)}>❌</button>
+                            </td>
+                        </tr>
+                    )}
                 </tbody>
             </table>
         </div>
